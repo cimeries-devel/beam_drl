@@ -76,7 +76,7 @@ El flujo general es el siguiente:
 
 ### 1. Dataset local
 
-Por defecto, el sistema usa: `data/dataset.json` [dataset](https://www.google.com](https://drive.google.com/file/d/1rUdOkpww1dhLj6ecp5qggoSAyJx44JO5/view?usp=sharing)
+Por defecto, el sistema usa: [`data/dataset.json`] (https://drive.google.com/file/d/1rUdOkpww1dhLj6ecp5qggoSAyJx44JO5/view?usp=sharing)
 
 Esta opción es la más simple para correr el proyecto sin integraciones externas.
 
