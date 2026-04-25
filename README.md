@@ -215,6 +215,10 @@ El algoritmo retorna un conjunto de diseños ordenados por prioridad:
 2. de menor peso total,
 3. con mejor fitness.
 
+#### un ejemplo de salida para:
+`python3 run_inference.py --beam_id 82188 --gen 10 --pop 20 --save ./test_figs`
+
+![Alt text](output.png)
 ---
 
 ## Cromosoma
