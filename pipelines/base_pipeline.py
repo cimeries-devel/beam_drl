@@ -79,5 +79,4 @@ class BasePipeline:
             return PipelineResult(
                 success=False,
                 message=str(e),
-                elapsed_seconds=elapsed
-            )
+                elapsed_seconds=elapsed)

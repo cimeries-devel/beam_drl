@@ -20,7 +20,6 @@ Total genes = 2 + 7 * BLOCK
 
 import os
 import sys
-
 import numpy as np
 
 _HERE = os.path.dirname(__file__)

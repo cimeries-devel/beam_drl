@@ -51,7 +51,6 @@ class TrainingPipeline(BasePipeline):
         return "inputs" in beam and "outputs" in beam and "id" in beam
 
     def preprocess(self, beam):
-        # limpieza, transformación, conversión de formatos
         return beam
 
     def run_core(self, beam):

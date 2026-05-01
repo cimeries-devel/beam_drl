@@ -106,6 +106,7 @@ def _mutate(z: np.ndarray, block_size, P_MUT_DIAM, P_MUT_RESET, P_MUT_ONI, P_MUT
 
     offset = 2
     N_ZONES = len(config_ga.ZONE_IDS)
+
     for bi in range(1 + N_ZONES):
         if bi > 0 and np.random.random() < P_MUT_RESET:
             z[offset: offset + block_size] = 0

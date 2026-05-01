@@ -291,7 +291,6 @@ Contiene los parámetros del algoritmo genético y reglas estructurales, incluye
 ---
 
 ## Salidas del sistema
-
 Al terminar, el proceso imprime algo similar a:
 
 - `Success`
@@ -301,7 +300,6 @@ Al terminar, el proceso imprime algo similar a:
 - `Artifacts`
 
 ### Métricas típicas
-
 Entre las métricas reportadas se incluyen:
 
 - generaciones ejecutadas,
@@ -312,7 +310,6 @@ Entre las métricas reportadas se incluyen:
 - fitness de la mejor solución.
 
 ---
-
 ## Artefactos generados
 
 Dependiendo de los argumentos usados, el sistema puede generar:
@@ -324,7 +321,6 @@ Dependiendo de los argumentos usados, el sistema puede generar:
 ---
 
 ## Visualización
-
 El proyecto incluye utilidades de visualización para mostrar:
 
 - diagrama de momentos,
@@ -338,7 +334,6 @@ Las figuras se guardan en el directorio indicado con `--save`.
 ---
 
 ## Dependencias
-
 Las dependencias principales del proyecto incluyen:
 
 - `numpy`
@@ -356,7 +351,6 @@ Las dependencias principales del proyecto incluyen:
 ---
 
 ## Uso recomendado
-
 Una forma práctica de correr el sistema es:
  - `python run_inference.py --beam_id 1 --seed 123 --save test_figs --json_out results.json`
 

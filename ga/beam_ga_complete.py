@@ -11,7 +11,6 @@ Retorna top-3 diseños (feasible primero, luego menor peso).
 import os
 import sys
 import time
-
 import numpy as np
 
 _HERE = os.path.dirname(__file__)

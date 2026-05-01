@@ -1,4 +1,3 @@
-import numpy as np
 
 def compute_fitness(eval_result: dict, b_cm: float, d_cm: float,
                     as_corrido: float, fc: float,
