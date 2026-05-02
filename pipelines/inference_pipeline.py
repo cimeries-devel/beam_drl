@@ -15,7 +15,6 @@ class InferencePipeline(BasePipeline):
         return data
 
     def run_core(self, data):
-        # Aquí iría la lógica de inferencia con un modelo o solución ya guardada
         return {
             "input": data,
             "prediction": None
