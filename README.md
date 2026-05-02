@@ -1,5 +1,8 @@
 # Beam RC Optimization
-
+## Alumnos
+- Efrain Rodriguez Infantes
+- Ronald Huamani Ortega
+- 
 Sistema para el **diseño óptimo de vigas de concreto armado** mediante un **algoritmo genético (GA)**.  
 El proyecto toma una viga como entrada, evalúa distintas alternativas de armado y devuelve las **mejores soluciones** priorizando:
 
