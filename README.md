@@ -2,7 +2,7 @@
 ## Alumnos
 - Efrain Rodriguez Infantes
 - Ronald Huamani Ortega
-- 
+
 Sistema para el **diseño óptimo de vigas de concreto armado** mediante un **algoritmo genético (GA)**.  
 El proyecto toma una viga como entrada, evalúa distintas alternativas de armado y devuelve las **mejores soluciones** priorizando:
 
@@ -40,6 +40,47 @@ El sistema busca automatizar el proceso de selección de acero de refuerzo para 
   - figuras de resultados,
   - gráfica de convergencia,
   - exportación a JSON.
+
+---
+
+## Entregables Semana 5
+
+### 1. Experimentos Ejecutados (A/B)
+Se realizaron experimentos comparando el **Baseline** con dos variantes para evaluar la sensibilidad del algoritmo genético.
+
+- **Baseline**: Configuración estándar (`pop_size=150`, `n_gen=200`, mutación base).
+- **Variante 1 (Alta Mutación)**: Se incrementó la probabilidad de mutación (`p_mut_oni=0.25`, `p_mut_choice=0.15`) para favorecer la exploración.
+- **Variante 2 (Gran Población)**: Se duplicó la población (`pop_size=300`) y se redujeron generaciones (`n_gen=100`) para evaluar diversidad vs convergencia.
+
+#### Resultados Comparables
+Los experimentos se ejecutaron sobre la viga `81189` con semilla fija (42).
+
+| Experimento | Best Fitness | Best Weight (kg) | Feasible | Time (s) | Gens |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Baseline** | 1792.35 | 145.63 | True | 158.6 | 150* |
+| **Var1: Alta Mutación** | 3325.23 | 164.66 | True | 82.3 | 73* |
+| **Var2: Gran Población** | 1814.20 | 144.18 | True | 214.6 | 100 |
+
+*\* Ejecución terminada por Early Stopping.*
+
+#### Gráfico de Convergencia
+![Convergencia A/B](test_figs/experiment_convergence.png)
+
+---
+
+### 2. Feature Set y Pipeline
+- **Features Añadidas**:
+    - Optimización simultánea de 2 diámetros globales (`diam_A`, `diam_B`).
+    - Configuración de 6 zonas independientes de bastones.
+    - Representación por capas con slots dinámicos según el ancho de viga.
+- **Transformaciones**: 
+    - Decodificación del cromosoma a geometría real de barras y cálculo de $\phi M_n$.
+    - Reparación de cromosomas para cumplir con el número mínimo/máximo de varillas por ancho.
+- **Pipeline**: Estructura basada en `BasePipeline` con pasos claros de `load` -> `preprocess` -> `run_core` -> `evaluate` -> `save_artifacts`.
+- **Validación y Leakage**:
+    - **Cero Leakage**: El diseño de cada viga es independiente. No hay intercambio de información entre el diseño de una viga y otra. El GA opera sobre los datos intrínsecos de la viga actual.
+    - **Split Correcto**: El sistema permite seleccionar vigas por ID (`--beam_id`) facilitando holdout manual.
+    - **Validación**: Se utiliza el enfoque de **holdout** (evaluación sobre vigas no vistas en el ajuste de hiperparámetros) y se valida la factibilidad estructural mediante penalizaciones en el fitness.
 
 ---
 

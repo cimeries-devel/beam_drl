@@ -45,11 +45,19 @@ class BeamGAComplete:
                  pop_size: int = POP_SIZE,
                  n_gen: int = N_GEN,
                  tournament_k: int = TOURNAMENT_K,
-                 seed: int = None):
+                 seed: int = None,
+                 p_mut_oni: float = P_MUT_ONI,
+                 p_mut_choice: float = P_MUT_CHOICE,
+                 p_mut_diam: float = P_MUT_DIAM,
+                 p_mut_reset: float = P_MUT_RESET):
         self.beam = beam
         self.pop_size = pop_size
         self.n_gen = n_gen
         self.tournament_k = tournament_k
+        self.p_mut_oni = p_mut_oni
+        self.p_mut_choice = p_mut_choice
+        self.p_mut_diam = p_mut_diam
+        self.p_mut_reset = p_mut_reset
 
         if seed is not None:
             np.random.seed(seed)
@@ -203,8 +211,8 @@ class BeamGAComplete:
             p1_idx = self._tournament(fits)
             p2_idx = self._tournament(fits)
             c1, c2 = chromosome_utils._crossover(pop[p1_idx], pop[p2_idx], self.BLOCK, P_CROSS)
-            c1 = repair(chromosome_utils._mutate(c1, self.BLOCK, P_MUT_DIAM, P_MUT_RESET, P_MUT_ONI, P_MUT_CHOICE), self.n_slots, self.min_v, self.max_v)
-            c2 = repair(chromosome_utils._mutate(c2, self.BLOCK, P_MUT_DIAM, P_MUT_RESET, P_MUT_ONI, P_MUT_CHOICE), self.n_slots, self.min_v, self.max_v)
+            c1 = repair(chromosome_utils._mutate(c1, self.BLOCK, self.p_mut_diam, self.p_mut_reset, self.p_mut_oni, self.p_mut_choice), self.n_slots, self.min_v, self.max_v)
+            c2 = repair(chromosome_utils._mutate(c2, self.BLOCK, self.p_mut_diam, self.p_mut_reset, self.p_mut_oni, self.p_mut_choice), self.n_slots, self.min_v, self.max_v)
             new_pop[new_idx] = c1
             if new_idx + 1 < self.pop_size:
                 new_pop[new_idx + 1] = c2
