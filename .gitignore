@@ -1,4 +1,8 @@
 .venv
+venv
 .idea
 #test_figs/*
 data/dataset.json
+pycache
+**/__pycache__/
+*.py[cod]
