@@ -22,6 +22,7 @@ NUM_REBAR_TYPES = len(REBAR_CATALOG)
 # --- Varillas permitidas por ancho de viga ---
 # (min_varillas, max_varillas) por capa
 VARILLAS_POR_ANCHO = {
+    0.15: (2, 2),
     0.20: (2, 2),
     0.25: (2, 3),
     0.30: (2, 4),

@@ -1,41 +1,34 @@
 """BeamGANSpans: GA para diseno de corrido + bastones en vigas de N tramos.
 
-Optimiza simultaneamente:
-  - 2 diametros globales (diam_A <= diam_B)
-  - Corrido TOP y BOT (opcionalmente simetricos)
-  - Bastones en 6*n_spans zonas (LEFT/MID/RIGHT x TOP/BOT por tramo)
+Cromosoma nuevo (sin genes globales diam_A/diam_B):
+  - Cada slot: [dO, on_i]  con dO en REBAR_CATALOG_N (0=3/8" .. 5=1")
+  - Offsets de bloques: corrido_top=0, corrido_bot=BLOCK, bastones=2*BLOCK+zone*BLOCK
 
 Retorna top-3 disenos (feasible primero, luego menor peso).
 """
 
-import os
-import sys
 import time
 
 import numpy as np
 
-_HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(_HERE, '..', 'GA_viga_completa'))
-sys.path.insert(0, os.path.join(_HERE, '..', 'mejora del modelo'))
-sys.path.insert(0, os.path.join(_HERE, '..', 'GA beam'))
+from config.config import VARILLAS_POR_ANCHO, R1
+from ga.chromosome import n_slots_for_beam, block_size
 
-from config import REBAR_CATALOG, VARILLAS_POR_ANCHO, R1
-from chromosome import n_slots_for_beam, block_size
-
-from config_n import (
+from .config_n import (
     N_CAPAS_MAX,
     generate_zone_ids,
     parse_zone_id,
     scaled_ga_params,
     CORRIDO_SIMETRICO,
     TOURNAMENT_K, N_ELITE,
-    P_CROSS, P_MUT_ONI, P_MUT_CHOICE, P_MUT_DIAM, P_MUT_RESET,
+    P_CROSS, P_MUT_ONI, P_MUT_RESET, P_MUT_DO,
     HOF_POOL_SIZE, RESTART_PAT, RESTART_RATIO,
+    REBAR_CATALOG_N, N_DIAM,
 )
-from chromosome_n import (
+from .chromosome_n import (
     chrom_length_n, decode_n, encode_n, repair_n,
 )
-from fitness_n import evaluate_and_fitness_n
+from .fitness_n import evaluate_and_fitness_n
 
 
 class BeamGANSpans:
@@ -50,7 +43,6 @@ class BeamGANSpans:
         self.corrido_simetrico = corrido_simetrico
         self.tournament_k = tournament_k
 
-        # Auto-escalar si no se proveen
         params = scaled_ga_params(self.n_spans)
         self.pop_size = pop_size if pop_size is not None else params['pop_size']
         self.n_gen = n_gen if n_gen is not None else params['n_gen']
@@ -76,7 +68,6 @@ class BeamGANSpans:
         self.zone_ids = generate_zone_ids(self.n_spans)
         self.n_zones = len(self.zone_ids)
 
-        # Demandas aproximadas por zona (para inicializacion)
         self.mu_zones = self._compute_mu_zones()
 
     # -------------------------------------------------------------------
@@ -123,7 +114,6 @@ class BeamGANSpans:
         pop = np.zeros((self.pop_size, self.chrom_L), dtype=np.int8)
         idx = 0
 
-        # Arquetipo A (30%): corrido minimo, bastones OFF
         n_A = max(1, int(self.pop_size * 0.30))
         for _ in range(n_A):
             if idx >= self.pop_size:
@@ -131,7 +121,6 @@ class BeamGANSpans:
             pop[idx] = self._repair(self._archetype_A())
             idx += 1
 
-        # Arquetipo B (40%): corrido minimo + bastones informados
         n_B = max(1, int(self.pop_size * 0.40))
         for _ in range(n_B):
             if idx >= self.pop_size:
@@ -139,25 +128,18 @@ class BeamGANSpans:
             pop[idx] = self._repair(self._archetype_B())
             idx += 1
 
-        # Arquetipo C: aleatorio
         while idx < self.pop_size:
             pop[idx] = self._repair(self._archetype_C())
             idx += 1
 
         return pop
 
-    def _make_base(self, dA: int = 1, dB: int = 2) -> np.ndarray:
-        z = np.zeros(self.chrom_L, dtype=np.int8)
-        z[0] = dA
-        z[1] = dB
-        return z
-
-    def _activate_corners(self, z: np.ndarray, block_offset: int,
-                          diam_choice: int = 0):
-        z[block_offset + 0] = diam_choice
+    def _activate_corners(self, z: np.ndarray, block_offset: int, dO: int = 2):
+        """Activa slots de esquina (capa 0, slot 0 y slot n_slots-1) con dO dado."""
+        z[block_offset + 0] = dO
         z[block_offset + 1] = 1
         last = block_offset + (self.n_slots - 1) * 2
-        z[last] = diam_choice
+        z[last] = dO
         z[last + 1] = 1
 
     def _repair(self, z: np.ndarray) -> np.ndarray:
@@ -167,23 +149,23 @@ class BeamGANSpans:
                         beam=self.beam)
 
     def _archetype_A(self) -> np.ndarray:
-        dA = np.random.randint(0, 4)
-        dB = np.random.randint(dA, 4)
-        z = self._make_base(dA, dB)
-        # Corrido TOP capa_0
-        self._activate_corners(z, 2, diam_choice=0)
-        # Corrido BOT capa_0
-        self._activate_corners(z, 2 + self.BLOCK, diam_choice=0)
+        """Corrido minimo (esquinas capa 0), bastones OFF."""
+        z = np.zeros(self.chrom_L, dtype=np.int8)
+        dO_corr = np.random.randint(1, 4)  # 1/2" a 3/4"
+        self._activate_corners(z, 0, dO=dO_corr)               # corrido_top
+        self._activate_corners(z, self.BLOCK, dO=dO_corr)      # corrido_bot
         return z
 
     def _archetype_B(self) -> np.ndarray:
-        dA = np.random.randint(0, 4)
-        dB = np.random.randint(dA, 4)
-        z = self._make_base(dA, dB)
-        self._activate_corners(z, 2, diam_choice=0)
-        self._activate_corners(z, 2 + self.BLOCK, diam_choice=0)
+        """Corrido minimo + bastones informados por demanda."""
+        z = np.zeros(self.chrom_L, dtype=np.int8)
+        dO_corr = np.random.randint(1, 4)
+        self._activate_corners(z, 0, dO=dO_corr)
+        self._activate_corners(z, self.BLOCK, dO=dO_corr)
 
-        as_corr = 2 * REBAR_CATALOG[dA]['area_cm2']
+        as_corr = 2 * REBAR_CATALOG_N[dO_corr]['area_cm2']
+        # Slots interiores (no esquinas): no estan bloqueados por el corrido
+        free_slots = list(range(1, self.n_slots - 1)) or [self.n_slots // 2]
 
         for zone_ord, zone_id in enumerate(self.zone_ids):
             mu = self.mu_zones.get(zone_id, 0.0)
@@ -192,24 +174,31 @@ class BeamGANSpans:
             mn_approx = as_corr * 4200 * self.d_cm / 100_000
             if mn_approx >= mu:
                 continue
-            n_extra = min(2, self.n_slots)
-            bast_offset = 2 + 2 * self.BLOCK + zone_ord * self.BLOCK
-            mid = self.n_slots // 2
-            for j in range(n_extra):
-                slot = mid + j
-                if slot < self.n_slots:
-                    base = bast_offset + slot * 2
-                    z[base] = 1      # diam_B
-                    z[base + 1] = 1  # ON
+            bast_offset = 2 * self.BLOCK + zone_ord * self.BLOCK
+            dO_bast = min(dO_corr + 1, N_DIAM - 1)
+
+            # Capa 0: solo slots libres (evitar esquinas bloqueadas por corrido)
+            for slot in free_slots:
+                base = bast_offset + slot * 2
+                z[base] = dO_bast
+                z[base + 1] = 1
+
+            # Para demanda muy alta, activar tambien capa 1 completa
+            if mu > 2.0 * mn_approx:
+                dO_capa1 = min(dO_corr + 2, N_DIAM - 1)
+                for s in range(self.n_slots):
+                    base = bast_offset + self.n_slots * 2 + s * 2
+                    z[base] = dO_capa1
+                    z[base + 1] = 1
         return z
 
     def _archetype_C(self) -> np.ndarray:
-        dA = np.random.randint(0, 4)
-        dB = np.random.randint(dA, 4)
-        z = self._make_base(dA, dB)
-        for offset in range(2, self.chrom_L, 2):
-            z[offset] = np.random.randint(0, 2)
-            z[offset + 1] = 1 if np.random.random() < 0.25 else 0
+        """Completamente aleatorio."""
+        z = np.zeros(self.chrom_L, dtype=np.int8)
+        for gi in range(self.chrom_L // 2):
+            off = gi * 2
+            z[off] = np.random.randint(0, N_DIAM)
+            z[off + 1] = 1 if np.random.random() < 0.25 else 0
         return z
 
     # -------------------------------------------------------------------
@@ -230,11 +219,10 @@ class BeamGANSpans:
         if np.random.random() > P_CROSS:
             return c1, c2
 
-        # Bloques: corrido_top + corrido_bot + 6*n_spans bastones
         n_blocks = 2 + self.n_zones
         for bi in range(n_blocks):
             if np.random.random() < 0.5:
-                off = 2 + bi * self.BLOCK
+                off = bi * self.BLOCK
                 end = off + self.BLOCK
                 c1[off:end], c2[off:end] = c2[off:end].copy(), c1[off:end].copy()
                 if np.random.random() < 0.3:
@@ -250,29 +238,28 @@ class BeamGANSpans:
     def _mutate(self, z: np.ndarray) -> np.ndarray:
         z = z.copy()
 
-        if np.random.random() < P_MUT_DIAM:
-            which = np.random.randint(0, 2)
-            delta = np.random.choice([-1, 1])
-            z[which] = int(np.clip(z[which] + delta, 0, 3))
-            if z[0] > z[1]:
-                z[0], z[1] = z[1], z[0]
-
         n_blocks = 2 + self.n_zones
-        offset = 2
         for bi in range(n_blocks):
-            # Reset solo bloques baston (bi >= 2)
+            off = bi * self.BLOCK
+
+            # Reset aleatorio solo en bloques baston (bi >= 2)
             if bi >= 2 and np.random.random() < P_MUT_RESET:
-                z[offset: offset + self.BLOCK] = 0
-                offset += self.BLOCK
+                z[off: off + self.BLOCK] = 0
                 continue
 
             for gi in range(self.BLOCK // 2):
-                gene_off = offset + gi * 2
+                gene_off = off + gi * 2
+                on_i = int(z[gene_off + 1])
+
+                # Flip on/off
                 if np.random.random() < P_MUT_ONI:
-                    z[gene_off + 1] = 1 - z[gene_off + 1]
-                if z[gene_off + 1] == 1 and np.random.random() < P_MUT_CHOICE:
-                    z[gene_off] = 1 - z[gene_off]
-            offset += self.BLOCK
+                    z[gene_off + 1] = 1 - on_i
+                    on_i = 1 - on_i
+
+                # Mutar dO en slots activos
+                if on_i == 1 and np.random.random() < P_MUT_DO:
+                    delta = np.random.choice([-1, 1])
+                    z[gene_off] = int(np.clip(int(z[gene_off]) + delta, 0, N_DIAM - 1))
 
         return z
 
@@ -285,7 +272,9 @@ class BeamGANSpans:
         n_bars_top = len(ev.get('corr_bars_top', []))
         n_bars_bot = len(ev.get('corr_bars_bot', []))
         dec = ev['decoded']
-        return (dec['diam_A'], dec['diam_B'], n_bars_top, n_bars_bot)
+        top_active = dec['corrido_top'][:, :, 0][dec['corrido_top'][:, :, 1] == 1]
+        med_top = int(np.median(top_active)) if len(top_active) > 0 else -1
+        return (med_top, n_bars_top, n_bars_bot)
 
     def _update_hof(self, hof: list, ev: dict, fit: float, z: np.ndarray):
         sig = self._corrido_signature(ev)
@@ -299,16 +288,20 @@ class BeamGANSpans:
         }
 
         def _key(e):
-            return (0 if e['feasible'] else 1, e['weight'])
+            # Feasible primero, luego por fitness (= peso para feasible,
+            # peso + penalizaciones para infactible → premia mas zonas cubiertas)
+            return (0 if e['feasible'] else 1, e['fitness'])
+
+        def _dominates(new, old):
+            if new['feasible'] and not old['feasible']:
+                return True
+            if new['feasible'] == old['feasible']:
+                return new['fitness'] < old['fitness']
+            return False
 
         for i, existing in enumerate(hof):
             if existing['sig'] == sig:
-                dominates = (
-                    (entry['feasible'] and not existing['feasible'])
-                    or (entry['feasible'] == existing['feasible']
-                        and entry['weight'] < existing['weight'])
-                )
-                if dominates:
+                if _dominates(entry, existing):
                     hof[i] = entry
                     hof.sort(key=_key)
                 return
@@ -375,7 +368,7 @@ class BeamGANSpans:
 
             if no_improve_count >= self.early_stop_pat:
                 early_stop_gen = gen + 1
-                print(f'  [Early stop] Gen {gen+1} — sin mejora por '
+                print(f'  [Early stop] Gen {gen+1} -- sin mejora por '
                       f'{self.early_stop_pat} gens ({elapsed:.1f}s)')
                 break
 
@@ -386,7 +379,7 @@ class BeamGANSpans:
                 for wi in worst_idx:
                     pop[wi] = self._repair(self._archetype_C())
                     fits[wi] = float('inf')
-                print(f'  [Reinicio #{restart_count}] Gen {gen+1} — '
+                print(f'  [Reinicio #{restart_count}] Gen {gen+1} -- '
                       f'reemplazados {n_replace} ({elapsed:.1f}s)')
 
             elite_idx = np.argsort(fits)[:N_ELITE]
@@ -416,10 +409,6 @@ class BeamGANSpans:
             dec = ev['decoded']
             top3.append({
                 'rank': rank,
-                'diam_A': REBAR_CATALOG[dec['diam_A']]['name'],
-                'diam_B': REBAR_CATALOG[dec['diam_B']]['name'],
-                'diam_A_idx': dec['diam_A'],
-                'diam_B_idx': dec['diam_B'],
                 'corrido_top_bars': ev['corr_bars_top'],
                 'corrido_bot_bars': ev['corr_bars_bot'],
                 'corrido_top_matrix': dec['corrido_top'],
@@ -484,3 +473,4 @@ if __name__ == '__main__':
         print(f"\nRank {r['rank']}: W={r['total_weight_kg']:.2f}kg, "
               f"feasible={r['feasible']}, "
               f"zones_ok={r['zones_ok']}/{ga.n_zones}")
+        print(f"  violations: {r['violations']}")
