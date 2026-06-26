@@ -1,13 +1,6 @@
 """Constantes y configuracion para el GA de vigas de N tramos."""
 
-import os
-import sys
-
-_HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(_HERE, '..', 'GA_viga_completa'))
-
-# Re-exportar constantes del sistema base
-from config_ga import (
+from config.config_ga import (
     N_CAPAS_MAX,
     S_VERT_MIN_CM,
     R_LIBRE_CM,
@@ -26,8 +19,6 @@ from config_ga import (
     N_ELITE,
     P_CROSS,
     P_MUT_ONI,
-    P_MUT_CHOICE,
-    P_MUT_DIAM,
     P_MUT_RESET,
     HOF_POOL_SIZE,
     RESTART_PAT,
@@ -40,6 +31,45 @@ from config_ga import (
     H_COL_DEFAULT_M,
     LAMBDA_ANCHORAGE,
 )
+
+# ---------------------------------------------------------------------------
+# Catalogo de varillas propio del sistema N-tramos (6 diametros: 3/8" a 1")
+# No modifica config.py del sistema PPO (que solo tiene 4 entradas).
+# ---------------------------------------------------------------------------
+REBAR_CATALOG_N = {
+    0: {"name": "1/2", "area_cm2": 1.29,  "diam_cm": 1.27},
+    1: {"name": "5/8", "area_cm2": 2.00,  "diam_cm": 1.59},
+    2: {"name": "3/4", "area_cm2": 2.84,  "diam_cm": 1.91},
+    3: {"name": "1",   "area_cm2": 5.10,  "diam_cm": 2.54},
+}
+
+# Peso lineal del acero (kg/m) por indice dO
+REBAR_WEIGHTS_KGM_N = {
+    0: 0.994,   # 1/2"
+    1: 1.552,   # 5/8"
+    2: 2.235,   # 3/4"
+    3: 3.973,   # 1"
+}
+
+# Numero de diametros disponibles (rango de dO: 0..N_DIAM-1)
+N_DIAM = 4
+
+# ---------------------------------------------------------------------------
+# Penalizaciones adicionales del sistema N-tramos
+# ---------------------------------------------------------------------------
+# Penaliza diametros no contiguos dentro de una zona (max(dO)-min(dO) > 1)
+LAMBDA_DIAM_CONTIG = 200.0
+
+# El corrido recorre toda la viga y naturalmente "sobra" en zonas de baja
+# demanda — ese exceso es inherente al diseño y ya lo penaliza el peso.
+# Anular aqui para no distorsionar el fitness en el sistema N-tramos.
+LAMBDA_CORR_EXC = 0.0
+
+# ---------------------------------------------------------------------------
+# Parametros de mutacion propios
+# ---------------------------------------------------------------------------
+# Probabilidad de mutar el diametro dO de un slot activo (±1 en catalogo)
+P_MUT_DO = 0.06
 
 # ---------------------------------------------------------------------------
 # Opciones de corrido

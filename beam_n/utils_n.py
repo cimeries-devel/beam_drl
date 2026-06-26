@@ -1,8 +1,7 @@
 """Funciones auxiliares para el GA de vigas de N tramos."""
 
-import sys
 import json
-from config import REBAR_CATALOG
+from .config_n import REBAR_CATALOG_N
 
 def prompt_h_col(beam: dict) -> None:
     """Prompt interactivo para h_col en cada apoyo."""
@@ -39,22 +38,22 @@ def prompt_h_col(beam: dict) -> None:
     beam['joints'] = joints
 
 def name2idx(dname: str) -> int:
-    """Busca el indice de un diametro por su nombre (ej. '5/8')."""
-    for idx, info in REBAR_CATALOG.items():
+    """Busca el indice dO de un diametro por su nombre (ej. '5/8')."""
+    for dO, info in REBAR_CATALOG_N.items():
         if info['name'] == dname:
-            return idx
+            return dO
     return 0
 
 def export_json(beam, result_ga, path):
     """Exporta los resultados a un archivo JSON."""
+    top = result_ga['top3'][0]
     data = {
         'beam_id': beam['id'],
         'n_spans': beam['n_spans'],
         'top_result': {
-            'total_weight_kg': result_ga['top3'][0]['total_weight_kg'],
-            'feasible': result_ga['top3'][0]['feasible'],
-            'diam_A': result_ga['top3'][0]['diam_A'],
-            'diam_B': result_ga['top3'][0]['diam_B'],
+            'total_weight_kg': top['total_weight_kg'],
+            'feasible': top['feasible'],
+            'zones_ok': top.get('zones_ok'),
         }
     }
     with open(path, 'w', encoding='utf-8') as f:

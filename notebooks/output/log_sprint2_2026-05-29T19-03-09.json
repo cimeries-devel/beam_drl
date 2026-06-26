@@ -1,0 +1,224 @@
+{
+  "timestamp": "2026-05-29T19:03:09",
+  "config": {
+    "seeds": [
+      42,
+      123,
+      7
+    ],
+    "quick": true,
+    "pop_quick": 80,
+    "gen_quick": 60
+  },
+  "resumen_por_viga": [
+    {
+      "beam_id": "28",
+      "n_spans": 1,
+      "W_mean_kg": 37.43,
+      "W_std_kg": 0.0,
+      "feas_pct": 100.0,
+      "conv_gen_mean": 1.0,
+      "time_s_mean": 17.6
+    },
+    {
+      "beam_id": "110+114",
+      "n_spans": 2,
+      "W_mean_kg": 232.59,
+      "W_std_kg": 0.37,
+      "feas_pct": 100.0,
+      "conv_gen_mean": 10.7,
+      "time_s_mean": 41.9
+    },
+    {
+      "beam_id": "18+17+16",
+      "n_spans": 3,
+      "W_mean_kg": 249.64,
+      "W_std_kg": 5.75,
+      "feas_pct": 100.0,
+      "conv_gen_mean": 11.0,
+      "time_s_mean": 62.2
+    }
+  ],
+  "detalle_corridas": [
+    {
+      "beam_id": "28",
+      "seed": 42,
+      "weight_kg": 37.43,
+      "feasible": true,
+      "zones_ok": 6,
+      "n_zones": 6,
+      "conv_gen": 1,
+      "time_s": 17.7,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 0.0,
+        "P_exceso_corrido": 4594.1432,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "28",
+      "seed": 123,
+      "weight_kg": 37.43,
+      "feasible": true,
+      "zones_ok": 6,
+      "n_zones": 6,
+      "conv_gen": 1,
+      "time_s": 17.7,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 0.0,
+        "P_exceso_corrido": 4594.1432,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "28",
+      "seed": 7,
+      "weight_kg": 37.43,
+      "feasible": true,
+      "zones_ok": 6,
+      "n_zones": 6,
+      "conv_gen": 1,
+      "time_s": 17.5,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 0.0,
+        "P_exceso_corrido": 4594.1432,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "110+114",
+      "seed": 42,
+      "weight_kg": 232.85,
+      "feasible": true,
+      "zones_ok": 12,
+      "n_zones": 12,
+      "conv_gen": 10,
+      "time_s": 41.8,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 3.8128,
+        "P_exceso_corrido": 692.708,
+        "P_constr_bast": 1.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "110+114",
+      "seed": 123,
+      "weight_kg": 232.85,
+      "feasible": true,
+      "zones_ok": 12,
+      "n_zones": 12,
+      "conv_gen": 22,
+      "time_s": 42.4,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 3.8128,
+        "P_exceso_corrido": 692.708,
+        "P_constr_bast": 1.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "110+114",
+      "seed": 7,
+      "weight_kg": 232.06,
+      "feasible": true,
+      "zones_ok": 12,
+      "n_zones": 12,
+      "conv_gen": 0,
+      "time_s": 41.4,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 1.9428,
+        "P_exceso_corrido": 692.708,
+        "P_constr_bast": 1.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "18+17+16",
+      "seed": 42,
+      "weight_kg": 253.71,
+      "feasible": true,
+      "zones_ok": 18,
+      "n_zones": 18,
+      "conv_gen": 24,
+      "time_s": 62.1,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 0.0,
+        "P_exceso_corrido": 3396.7514,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "18+17+16",
+      "seed": 123,
+      "weight_kg": 241.51,
+      "feasible": true,
+      "zones_ok": 18,
+      "n_zones": 18,
+      "conv_gen": 1,
+      "time_s": 62.0,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 10.0582,
+        "P_exceso_corrido": 3167.6066,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    },
+    {
+      "beam_id": "18+17+16",
+      "seed": 7,
+      "weight_kg": 253.71,
+      "feasible": true,
+      "zones_ok": 18,
+      "n_zones": 18,
+      "conv_gen": 8,
+      "time_s": 62.4,
+      "violations": {
+        "P_capacidad": 0.0,
+        "P_normativa": 0.0,
+        "P_constructiva": 0.0,
+        "P_exceso_bast": 0.0,
+        "P_exceso_corrido": 3396.7514,
+        "P_constr_bast": 0.0,
+        "P_anclaje_ext": 0.0,
+        "P_diam_contig": 0.0
+      }
+    }
+  ]
+}
