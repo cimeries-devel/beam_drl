@@ -1,0 +1,7 @@
+config,desc,use_repair,n_elite,early_stop,tournament_k,W_mean_kg,W_std_kg,feas_pct,gens_mean,time_mean_s
+REF,Configuracion de referencia,True,5,30,3,245.58,5.75,100.0,43.0,52.7
+ABL_REPAIR,Sin reparacion del cromosoma,False,5,30,3,249.64,5.75,100.0,44.3,54.5
+ABL_ELITE,Sin elitismo (N_ELITE=0),True,0,30,3,253.71,0.0,100.0,47.0,62.5
+ABL_ES,Sin early stopping (pat=9999),True,5,9999,3,249.64,5.75,100.0,100.0,124.6
+ABL_TK2,Baja presion de seleccion (k=2),True,5,30,2,253.71,0.0,100.0,55.0,79.3
+ABL_TK8,Alta presion de seleccion (k=8),True,5,30,8,245.58,5.75,100.0,32.3,38.8

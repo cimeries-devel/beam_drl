@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-06-12T18:29:36",
+  "beam_id": "18+17+16",
+  "n_spans": 3,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "pop": 100,
+  "n_gen": 100,
+  "early_stop_base": 30,
+  "results": [
+    {
+      "config": "REF",
+      "desc": "Configuracion de referencia",
+      "use_repair": true,
+      "n_elite": 5,
+      "early_stop": 30,
+      "tournament_k": 3,
+      "W_mean": 245.58,
+      "W_std": 5.75,
+      "feas_pct": 100.0,
+      "gens_mean": 43.0,
+      "time_mean": 52.7
+    },
+    {
+      "config": "ABL_REPAIR",
+      "desc": "Sin reparacion del cromosoma",
+      "use_repair": false,
+      "n_elite": 5,
+      "early_stop": 30,
+      "tournament_k": 3,
+      "W_mean": 249.64,
+      "W_std": 5.75,
+      "feas_pct": 100.0,
+      "gens_mean": 44.3,
+      "time_mean": 54.5
+    },
+    {
+      "config": "ABL_ELITE",
+      "desc": "Sin elitismo (N_ELITE=0)",
+      "use_repair": true,
+      "n_elite": 0,
+      "early_stop": 30,
+      "tournament_k": 3,
+      "W_mean": 253.71,
+      "W_std": 0.0,
+      "feas_pct": 100.0,
+      "gens_mean": 47.0,
+      "time_mean": 62.5
+    },
+    {
+      "config": "ABL_ES",
+      "desc": "Sin early stopping (pat=9999)",
+      "use_repair": true,
+      "n_elite": 5,
+      "early_stop": 9999,
+      "tournament_k": 3,
+      "W_mean": 249.64,
+      "W_std": 5.75,
+      "feas_pct": 100.0,
+      "gens_mean": 100.0,
+      "time_mean": 124.6
+    },
+    {
+      "config": "ABL_TK2",
+      "desc": "Baja presion de seleccion (k=2)",
+      "use_repair": true,
+      "n_elite": 5,
+      "early_stop": 30,
+      "tournament_k": 2,
+      "W_mean": 253.71,
+      "W_std": 0.0,
+      "feas_pct": 100.0,
+      "gens_mean": 55.0,
+      "time_mean": 79.3
+    },
+    {
+      "config": "ABL_TK8",
+      "desc": "Alta presion de seleccion (k=8)",
+      "use_repair": true,
+      "n_elite": 5,
+      "early_stop": 30,
+      "tournament_k": 8,
+      "W_mean": 245.58,
+      "W_std": 5.75,
+      "feas_pct": 100.0,
+      "gens_mean": 32.3,
+      "time_mean": 38.8
+    }
+  ]
+}
