@@ -1,0 +1,45 @@
+Cargado: 110+114, 2 tramos
+h_col_default activo -> 0.30 m en todos los apoyos
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 4.575, 12.1]
+  T1: frame=110, L=4.575m
+  T2: frame=114, L=7.525m
+
+GA: pop=120, gen=120, chrom=252 genes, 12 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=436.37 | mean=74307.51 | HoF=167.22kg (12/12 OK) | sin mejora= 0 | 0.8s
+  Gen   4/120 | best=384.61 | mean=62915.20 | HoF=231.78kg (12/12 OK) | sin mejora= 0 | 4.1s
+  Gen   6/120 | best=323.42 | mean=59901.53 | HoF=234.87kg (12/12 OK) | sin mejora= 0 | 6.3s
+  Gen   8/120 | best=248.27 | mean=61938.79 | HoF=240.39kg (12/12 OK) | sin mejora= 0 | 8.6s
+  Gen  12/120 | best=248.27 | mean=62050.39 | HoF=240.39kg (12/12 OK) | sin mejora= 4 | 13.2s
+  Gen  18/120 | best=248.27 | mean=57179.45 | HoF=240.39kg (12/12 OK) | sin mejora=10 | 20.3s
+  Gen  24/120 | best=248.27 | mean=55524.91 | HoF=240.39kg (12/12 OK) | sin mejora=16 | 27.4s
+  Gen  30/120 | best=248.27 | mean=56616.91 | HoF=240.39kg (12/12 OK) | sin mejora=22 | 34.3s
+  [Reinicio #1] Gen 33 -- reemplazados 60 (37.8s)
+  Gen  36/120 | best=248.27 | mean=57961.71 | HoF=240.39kg (12/12 OK) | sin mejora=28 | 41.5s
+  Gen  42/120 | best=248.27 | mean=56135.86 | HoF=240.39kg (12/12 OK) | sin mejora=34 | 48.3s
+  Gen  48/120 | best=248.27 | mean=63664.07 | HoF=240.39kg (12/12 OK) | sin mejora=40 | 55.4s
+  Gen  54/120 | best=248.27 | mean=59448.39 | HoF=240.39kg (12/12 OK) | sin mejora=46 | 62.4s
+  [Reinicio #2] Gen 58 -- reemplazados 60 (67.2s)
+  Gen  60/120 | best=248.27 | mean=59970.15 | HoF=240.39kg (12/12 OK) | sin mejora=52 | 69.7s
+  Gen  66/120 | best=248.27 | mean=54536.12 | HoF=240.39kg (12/12 OK) | sin mejora=58 | 76.7s
+  [Early stop] Gen 68 -- sin mejora por 60 gens (79.1s)
+
+============================================================
+Generaciones: 68, tiempo: 79.1s
+
+Rank 1: W=240.39kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 1o1"+2o3/4"  BOT: 1o1"+2o3/4"
+
+Rank 2: W=232.85kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o1"  BOT: 2o1"
+
+Rank 3: W=288.81kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o1"+1o3/4"  BOT: 2o1"+1o3/4"
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_baseline\ga_ntramos_110+114_rank1.png
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_baseline\ga_ntramos_110+114_rank2.png
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_baseline\ga_ntramos_110+114_rank3.png
+  Convergencia guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_baseline\convergencia_110+114.png
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\baseline_beam_viga_2_tramos_s42.json

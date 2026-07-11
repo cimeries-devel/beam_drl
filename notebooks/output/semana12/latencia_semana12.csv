@@ -1,0 +1,3 @@
+modelo,n,p50_s,p95_s,max_s,throughput_vigas_h,errores
+actual,6,232.7,279.9,281.2,15.9,0/7
+baseline,6,95.3,132.9,138.9,36.3,0/7

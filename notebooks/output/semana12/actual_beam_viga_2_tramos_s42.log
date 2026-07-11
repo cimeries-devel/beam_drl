@@ -1,0 +1,61 @@
+Cargado: 110+114, 2 tramos
+Joints tomados del JSON:
+  Apoyo 0 (exterior): nodo x=  0.00  caras=[-0.125, 0.125]  ancho=0.25 m
+  Apoyo 1 (interior): nodo x=  4.58  caras=[4.450, 4.700]  ancho=0.25 m
+  Apoyo 2 (exterior): nodo x= 12.10  caras=[12.100, 13.800]  ancho=1.70 m
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 4.575, 12.1]
+  T1: frame=110, L=4.575m
+  T2: frame=114, L=7.525m
+
+GA: pop=120, gen=120, chrom=252 genes, 12 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=1000009235.92 | mean=1000153743.92 | HoF=233.79kg (12/12 OK) | sin mejora= 0 | 11.4s
+  Gen   5/120 | best=1000007062.98 | mean=1000115290.56 | HoF=233.79kg (12/12 OK) | sin mejora= 0 | 16.5s
+  Gen   6/120 | best=1000007062.98 | mean=1000115930.87 | HoF=233.79kg (12/12 OK) | sin mejora= 1 | 17.9s
+  Gen  12/120 | best=1000007062.98 | mean=1000107927.30 | HoF=233.79kg (12/12 OK) | sin mejora= 7 | 26.4s
+  Gen  15/120 | best=1000004161.05 | mean=1000106302.03 | HoF=233.79kg (12/12 OK) | sin mejora= 0 | 30.7s
+  Gen  18/120 | best=282.18 | mean=991767732.00 | HoF=223.74kg (12/12 OK) | sin mejora= 0 | 35.4s
+  Gen  24/120 | best=282.18 | mean=991768482.45 | HoF=223.74kg (12/12 OK) | sin mejora= 6 | 43.9s
+  Gen  30/120 | best=282.18 | mean=991767304.68 | HoF=223.74kg (12/12 OK) | sin mejora=12 | 51.7s
+  Gen  36/120 | best=282.18 | mean=966765954.43 | HoF=223.74kg (12/12 OK) | sin mejora=18 | 61.0s
+  Gen  42/120 | best=282.18 | mean=966770864.75 | HoF=223.74kg (12/12 OK) | sin mejora=24 | 68.9s
+  [Reinicio #1] Gen 43 -- reemplazados 60 (73.4s)
+  Gen  48/120 | best=282.18 | mean=966768240.42 | HoF=223.74kg (12/12 OK) | sin mejora=30 | 80.3s
+  Gen  54/120 | best=282.18 | mean=950108183.52 | HoF=223.74kg (12/12 OK) | sin mejora=36 | 88.4s
+  Gen  60/120 | best=282.18 | mean=950106323.48 | HoF=223.74kg (12/12 OK) | sin mejora=42 | 96.5s
+  Gen  66/120 | best=282.18 | mean=950111647.65 | HoF=223.74kg (12/12 OK) | sin mejora=48 | 104.6s
+  [Reinicio #2] Gen 68 -- reemplazados 60 (107.4s)
+  Gen  72/120 | best=282.18 | mean=958439215.02 | HoF=223.74kg (12/12 OK) | sin mejora=54 | 113.0s
+  Gen  78/120 | best=282.18 | mean=958436230.66 | HoF=223.74kg (12/12 OK) | sin mejora=60 | 121.2s
+  Gen  84/120 | best=282.18 | mean=958432611.75 | HoF=223.74kg (12/12 OK) | sin mejora=66 | 128.9s
+  Gen  90/120 | best=282.18 | mean=958439795.90 | HoF=223.74kg (12/12 OK) | sin mejora=72 | 136.7s
+  [Reinicio #3] Gen 93 -- reemplazados 60 (140.6s)
+  Gen  96/120 | best=282.18 | mean=958440296.07 | HoF=223.74kg (12/12 OK) | sin mejora=78 | 144.7s
+  [Early stop] Gen 98 -- sin mejora por 80 gens (147.5s)
+
+============================================================
+Generaciones: 98, tiempo: 147.5s
+
+Rank 1: W=223.74kg, feasible=True, D/C max=0.958 (x=12.10)
+  Corrido TOP: 3o3/4"  BOT: 3o3/4"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 2: W=197.21kg, feasible=False, D/C max=0.966 (x=12.10)
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+  [As+ regla 5.DS.03] MID_BOT_T2: 1o1" extendida(s) hasta cara derecha (x=12.10, aporta 5.10 cm2 de 1.74 req)
+
+Rank 3: W=339.59kg, feasible=False, D/C max=0.983 (x=7.87)
+  Corrido TOP: 1o1"+2o5/8"  BOT: 1o1"+2o5/8"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\ga_ntramos_110+114_rank1.png
+  Geometria 3D exportada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\design3d_110+114_rank1.json
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\ga_ntramos_110+114_rank2.png
+  Geometria 3D exportada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\design3d_110+114_rank2.json
+  Figura guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\ga_ntramos_110+114_rank3.png
+  Geometria 3D exportada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\design3d_110+114_rank3.json
+  Convergencia guardada: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\figs_actual\convergencia_110+114.png
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\actual_beam_viga_2_tramos_s42.json

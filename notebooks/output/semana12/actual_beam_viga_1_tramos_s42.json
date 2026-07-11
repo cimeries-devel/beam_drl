@@ -1,0 +1,61 @@
+{
+  "beam_id": "28",
+  "n_spans": 1,
+  "b": 0.15,
+  "h": 0.45,
+  "fc": 210.0,
+  "supports_x_m": [
+    0.0,
+    3.74
+  ],
+  "spans": [
+    {
+      "frame": "28",
+      "L_m": 3.74,
+      "x0": 0.0,
+      "x1": 3.74,
+      "b_m": 0.15,
+      "h_m": 0.45
+    }
+  ],
+  "top3": [
+    {
+      "rank": 1,
+      "corrido_top": "2o1/2\"",
+      "corrido_bot": "2o1/2\"",
+      "total_weight_kg": 15.131,
+      "corrido_weight_kg": 15.131,
+      "baston_weight_kg": 0.0,
+      "feasible": true,
+      "zones_ok": 6,
+      "zones_total": 6,
+      "active_zones": {}
+    },
+    {
+      "rank": 2,
+      "corrido_top": "2o5/8\"",
+      "corrido_bot": "2o5/8\"",
+      "total_weight_kg": 24.742,
+      "corrido_weight_kg": 24.742,
+      "baston_weight_kg": 0.0,
+      "feasible": true,
+      "zones_ok": 6,
+      "zones_total": 6,
+      "active_zones": {}
+    },
+    {
+      "rank": 3,
+      "corrido_top": "2o3/4\"",
+      "corrido_bot": "2o3/4\"",
+      "total_weight_kg": 37.24,
+      "corrido_weight_kg": 37.24,
+      "baston_weight_kg": 0.0,
+      "feasible": true,
+      "zones_ok": 6,
+      "zones_total": 6,
+      "active_zones": {}
+    }
+  ],
+  "generations_run": 81,
+  "elapsed_s": 40.2
+}

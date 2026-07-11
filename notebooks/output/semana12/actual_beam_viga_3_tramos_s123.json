@@ -1,0 +1,229 @@
+{
+  "beam_id": "18+17+16",
+  "n_spans": 3,
+  "b": 0.25,
+  "h": 0.55,
+  "fc": 210.0,
+  "supports_x_m": [
+    0.0,
+    5.73,
+    11.18,
+    13.93
+  ],
+  "spans": [
+    {
+      "frame": "18",
+      "L_m": 5.73,
+      "x0": 0.0,
+      "x1": 5.73,
+      "b_m": 0.25,
+      "h_m": 0.55
+    },
+    {
+      "frame": "17",
+      "L_m": 5.45,
+      "x0": 5.73,
+      "x1": 11.18,
+      "b_m": 0.25,
+      "h_m": 0.55
+    },
+    {
+      "frame": "16",
+      "L_m": 2.75,
+      "x0": 11.18,
+      "x1": 13.93,
+      "b_m": 0.25,
+      "h_m": 0.55
+    }
+  ],
+  "top3": [
+    {
+      "rank": 1,
+      "corrido_top": "1o1\"+1o3/4\"",
+      "corrido_bot": "1o1\"+1o3/4\"",
+      "total_weight_kg": 324.882,
+      "corrido_weight_kg": 184.489,
+      "baston_weight_kg": 140.393,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 34.2253,
+          "Mu": 15.9079,
+          "ok": true,
+          "n_bast": 7,
+          "weight_kg": 25.2053
+        },
+        "RIGHT_BOT_T1": {
+          "phi_Mn": 31.9946,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 11.4027
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 34.2253,
+          "Mu": 13.516,
+          "ok": true,
+          "n_bast": 7,
+          "weight_kg": 25.2053
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 35.6495,
+          "Mu": 16.2236,
+          "ok": true,
+          "n_bast": 4,
+          "weight_kg": 20.5233
+        },
+        "LEFT_BOT_T2": {
+          "phi_Mn": 31.9946,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 11.4027
+        },
+        "MID_BOT_T2": {
+          "phi_Mn": 18.098,
+          "Mu": 15.3314,
+          "ok": true,
+          "n_bast": 1,
+          "weight_kg": 2.9537
+        },
+        "RIGHT_BOT_T2": {
+          "phi_Mn": 25.9003,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 4.4923
+        },
+        "LEFT_TOP_T3": {
+          "phi_Mn": 35.6495,
+          "Mu": 12.1218,
+          "ok": true,
+          "n_bast": 4,
+          "weight_kg": 20.5233
+        },
+        "LEFT_BOT_T3": {
+          "phi_Mn": 25.9003,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 4.4923
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "corrido_top": "1o1\"+2o3/4\"",
+      "corrido_bot": "1o1\"+2o3/4\"",
+      "total_weight_kg": 360.182,
+      "corrido_weight_kg": 250.337,
+      "baston_weight_kg": 109.845,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 37.5878,
+          "Mu": 15.6905,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 21.244
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 37.5878,
+          "Mu": 13.516,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 21.244
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 38.0532,
+          "Mu": 16.2236,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 21.2439
+        },
+        "RIGHT_BOT_T2": {
+          "phi_Mn": 29.0083,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 2,
+          "weight_kg": 6.953
+        },
+        "LEFT_TOP_T3": {
+          "phi_Mn": 38.0532,
+          "Mu": 12.1218,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 21.2439
+        },
+        "LEFT_BOT_T3": {
+          "phi_Mn": 29.0083,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 2,
+          "weight_kg": 6.953
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "corrido_top": "2o1\"+1o3/4\"",
+      "corrido_bot": "2o1\"+1o3/4\"",
+      "total_weight_kg": 392.852,
+      "corrido_weight_kg": 303.131,
+      "baston_weight_kg": 89.721,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 41.1875,
+          "Mu": 15.6905,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 11.8008
+        },
+        "RIGHT_BOT_T1": {
+          "phi_Mn": 41.8021,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 13.3493
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 41.1875,
+          "Mu": 13.516,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 11.8008
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 39.09,
+          "Mu": 16.2236,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 14.7624
+        },
+        "LEFT_BOT_T2": {
+          "phi_Mn": 41.8021,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 13.3493
+        },
+        "LEFT_TOP_T3": {
+          "phi_Mn": 39.09,
+          "Mu": 12.1218,
+          "ok": true,
+          "n_bast": 3,
+          "weight_kg": 14.7624
+        }
+      }
+    }
+  ],
+  "generations_run": 120,
+  "elapsed_s": 275.3
+}

@@ -1,0 +1,87 @@
+{
+  "beam_id": "18+17+16",
+  "n_spans": 3,
+  "b": 0.25,
+  "h": 0.55,
+  "fc": 210.0,
+  "supports_x_m": [
+    0.0,
+    5.73,
+    11.18,
+    13.93
+  ],
+  "spans": [
+    {
+      "frame": "18",
+      "L_m": 5.73,
+      "x0": 0.0,
+      "x1": 5.73,
+      "b_m": 0.25,
+      "h_m": 0.55
+    },
+    {
+      "frame": "17",
+      "L_m": 5.45,
+      "x0": 5.73,
+      "x1": 11.18,
+      "b_m": 0.25,
+      "h_m": 0.55
+    },
+    {
+      "frame": "16",
+      "L_m": 2.75,
+      "x0": 11.18,
+      "x1": 13.93,
+      "b_m": 0.25,
+      "h_m": 0.55
+    }
+  ],
+  "top3": [
+    {
+      "rank": 1,
+      "corrido_top": "1o1\"+2o3/4\"",
+      "corrido_bot": "1o1\"+2o3/4\"",
+      "total_weight_kg": 253.714,
+      "corrido_weight_kg": 253.714,
+      "baston_weight_kg": 0.0,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {}
+    },
+    {
+      "rank": 2,
+      "corrido_top": "2o1\"",
+      "corrido_bot": "2o1\"",
+      "total_weight_kg": 241.508,
+      "corrido_weight_kg": 240.462,
+      "baston_weight_kg": 1.046,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 19.2429,
+          "Mu": 17.4843,
+          "ok": true,
+          "n_bast": 1,
+          "weight_kg": 0.499
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "corrido_top": "2o1\"+1o3/4\"",
+      "corrido_bot": "2o1\"+1o3/4\"",
+      "total_weight_kg": 307.203,
+      "corrido_weight_kg": 307.203,
+      "baston_weight_kg": 0.0,
+      "feasible": true,
+      "zones_ok": 18,
+      "zones_total": 18,
+      "active_zones": {}
+    }
+  ],
+  "generations_run": 73,
+  "elapsed_s": 114.5
+}

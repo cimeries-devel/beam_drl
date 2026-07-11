@@ -1,0 +1,192 @@
+{
+  "beam_id": "110+114",
+  "n_spans": 2,
+  "b": 0.25,
+  "h": 0.55,
+  "fc": 210.0,
+  "supports_x_m": [
+    0.0,
+    4.575,
+    12.1
+  ],
+  "spans": [
+    {
+      "frame": "110",
+      "L_m": 4.575,
+      "x0": 0.0,
+      "x1": 4.575,
+      "b_m": 0.25,
+      "h_m": 0.55
+    },
+    {
+      "frame": "114",
+      "L_m": 7.525,
+      "x0": 4.575,
+      "x1": 12.1,
+      "b_m": 0.25,
+      "h_m": 0.55
+    }
+  ],
+  "top3": [
+    {
+      "rank": 1,
+      "corrido_top": "3o3/4\"",
+      "corrido_bot": "3o3/4\"",
+      "total_weight_kg": 306.06,
+      "corrido_weight_kg": 178.36,
+      "baston_weight_kg": 127.7,
+      "feasible": true,
+      "zones_ok": 12,
+      "zones_total": 12,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 34.2316,
+          "Mu": 15.1679,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 24.4847
+        },
+        "RIGHT_BOT_T1": {
+          "phi_Mn": 34.2316,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 18.9123
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 34.2316,
+          "Mu": 14.7747,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 24.4847
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 33.1237,
+          "Mu": 31.1347,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 14.4895
+        },
+        "LEFT_BOT_T2": {
+          "phi_Mn": 34.2316,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 18.9123
+        },
+        "MID_BOT_T2": {
+          "phi_Mn": 22.7819,
+          "Mu": 15.1522,
+          "ok": true,
+          "n_bast": 2,
+          "weight_kg": 8.1393
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "corrido_top": "2o3/4\"",
+      "corrido_bot": "2o3/4\"",
+      "total_weight_kg": 197.207,
+      "corrido_weight_kg": 118.906,
+      "baston_weight_kg": 78.3,
+      "feasible": false,
+      "zones_ok": 12,
+      "zones_total": 12,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 18.1153,
+          "Mu": 15.1679,
+          "ok": true,
+          "n_bast": 1,
+          "weight_kg": 5.7609
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 18.1153,
+          "Mu": 14.7747,
+          "ok": true,
+          "n_bast": 1,
+          "weight_kg": 5.7609
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 32.2188,
+          "Mu": 31.1347,
+          "ok": true,
+          "n_bast": 4,
+          "weight_kg": 20.1408
+        },
+        "MID_BOT_T2": {
+          "phi_Mn": 18.1153,
+          "Mu": 15.1522,
+          "ok": true,
+          "n_bast": 1,
+          "weight_kg": 14.5898
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "corrido_top": "1o3/4\"+2o5/8\"",
+      "corrido_bot": "1o3/4\"+2o5/8\"",
+      "total_weight_kg": 340.904,
+      "corrido_weight_kg": 140.905,
+      "baston_weight_kg": 199.999,
+      "feasible": false,
+      "zones_ok": 12,
+      "zones_total": 12,
+      "active_zones": {
+        "RIGHT_TOP_T1": {
+          "phi_Mn": 31.8495,
+          "Mu": 15.1679,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 24.4847
+        },
+        "RIGHT_BOT_T1": {
+          "phi_Mn": 31.8495,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 18.9123
+        },
+        "LEFT_TOP_T2": {
+          "phi_Mn": 31.8495,
+          "Mu": 14.7747,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 24.4847
+        },
+        "RIGHT_TOP_T2": {
+          "phi_Mn": 31.6058,
+          "Mu": 31.1347,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 24.215
+        },
+        "LEFT_BOT_T2": {
+          "phi_Mn": 31.8495,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 6,
+          "weight_kg": 18.9123
+        },
+        "MID_BOT_T2": {
+          "phi_Mn": 26.1554,
+          "Mu": 15.1522,
+          "ok": true,
+          "n_bast": 2,
+          "weight_kg": 24.8882
+        },
+        "RIGHT_BOT_T2": {
+          "phi_Mn": 32.704,
+          "Mu": 0.0,
+          "ok": true,
+          "n_bast": 5,
+          "weight_kg": 18.3557
+        }
+      }
+    }
+  ],
+  "generations_run": 120,
+  "elapsed_s": 195.7
+}

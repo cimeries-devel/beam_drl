@@ -1,0 +1,70 @@
+Cargado: 18+17+16, 3 tramos
+Joints tomados del JSON:
+  Apoyo 0 (exterior): nodo x=  0.00  caras=[-0.100, 0.100]  ancho=0.20 m
+  Apoyo 1 (interior): nodo x=  5.73  caras=[5.605, 5.855]  ancho=0.25 m
+  Apoyo 2 (interior): nodo x= 11.18  caras=[11.005, 11.355]  ancho=0.35 m
+  Apoyo 3 (exterior): nodo x= 13.93  caras=[13.830, 14.030]  ancho=0.20 m
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 5.73, 11.18, 13.93]
+  T1: frame=18, L=5.730m
+  T2: frame=17, L=5.450m
+  T3: frame=16, L=2.750m
+
+GA: pop=120, gen=120, chrom=360 genes, 18 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=1000013350.84 | mean=1000113275.40 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 5.3s
+  Gen   2/120 | best=1000008431.74 | mean=1000143637.53 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 13.4s
+  Gen   4/120 | best=1000005115.01 | mean=1000110182.77 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 17.2s
+  Gen   6/120 | best=1000005115.01 | mean=1000113828.14 | HoF=165.42kg (18/18 OK) | sin mejora= 2 | 41.8s
+  Gen   9/120 | best=1000004908.63 | mean=1000111450.52 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 47.9s
+  Gen  12/120 | best=1000003089.32 | mean=1000109360.96 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 53.9s
+  Gen  16/120 | best=1000002202.22 | mean=1000100432.40 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 61.7s
+  Gen  18/120 | best=1000002202.22 | mean=1000107260.81 | HoF=165.42kg (18/18 OK) | sin mejora= 2 | 65.6s
+  Gen  24/120 | best=1000002135.45 | mean=1000117886.73 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 77.4s
+  Gen  29/120 | best=1000002109.99 | mean=1000108465.50 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 87.6s
+  Gen  30/120 | best=1000002109.99 | mean=1000110267.86 | HoF=165.42kg (18/18 OK) | sin mejora= 1 | 89.7s
+  Gen  36/120 | best=1000002109.99 | mean=1000108603.73 | HoF=165.42kg (18/18 OK) | sin mejora= 7 | 101.5s
+  Gen  38/120 | best=1000001415.39 | mean=1000097465.86 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 105.4s
+  Gen  42/120 | best=1000001415.39 | mean=1000102949.84 | HoF=165.42kg (18/18 OK) | sin mejora= 4 | 113.4s
+  Gen  45/120 | best=662.67 | mean=991772370.90 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 119.3s
+  Gen  48/120 | best=662.67 | mean=983440703.51 | HoF=165.42kg (18/18 OK) | sin mejora= 3 | 125.5s
+  Gen  54/120 | best=662.67 | mean=958441702.92 | HoF=165.42kg (18/18 OK) | sin mejora= 9 | 137.8s
+  Gen  60/120 | best=640.89 | mean=941770785.85 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 150.0s
+  Gen  63/120 | best=638.95 | mean=941772482.99 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 156.0s
+  Gen  66/120 | best=638.95 | mean=941763867.79 | HoF=165.42kg (18/18 OK) | sin mejora= 3 | 161.7s
+  Gen  69/120 | best=632.49 | mean=950098088.53 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 167.4s
+  Gen  72/120 | best=632.49 | mean=933445748.06 | HoF=165.42kg (18/18 OK) | sin mejora= 3 | 173.0s
+  Gen  76/120 | best=609.98 | mean=950106179.97 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 181.1s
+  Gen  78/120 | best=609.98 | mean=950095217.55 | HoF=165.42kg (18/18 OK) | sin mejora= 2 | 185.2s
+  Gen  84/120 | best=609.98 | mean=950108374.63 | HoF=165.42kg (18/18 OK) | sin mejora= 8 | 197.1s
+  Gen  89/120 | best=600.95 | mean=950103537.49 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 207.0s
+  Gen  90/120 | best=600.95 | mean=950106015.74 | HoF=165.42kg (18/18 OK) | sin mejora= 1 | 209.0s
+  Gen  96/120 | best=600.95 | mean=941772968.32 | HoF=165.42kg (18/18 OK) | sin mejora= 7 | 220.8s
+  Gen 102/120 | best=600.95 | mean=941781445.32 | HoF=165.42kg (18/18 OK) | sin mejora=13 | 232.3s
+  Gen 108/120 | best=600.95 | mean=958442103.21 | HoF=165.42kg (18/18 OK) | sin mejora=19 | 244.0s
+  Gen 111/120 | best=311.45 | mean=950108064.72 | HoF=165.42kg (18/18 OK) | sin mejora= 0 | 249.9s
+  Gen 114/120 | best=311.45 | mean=950103457.57 | HoF=165.42kg (18/18 OK) | sin mejora= 3 | 256.1s
+  Gen 120/120 | best=311.45 | mean=950115776.30 | HoF=165.42kg (18/18 OK) | sin mejora= 9 | 268.5s
+
+============================================================
+Generaciones: 120, tiempo: 268.5s
+
+Rank 1: W=165.42kg, feasible=True, D/C max=0.943 (x=2.33)
+  Corrido TOP: 2o5/8"  BOT: 2o5/8"
+  [ADVERTENCIA anclaje] extremo derecho TOP: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.07 t.m — verificar release en el modelo o ancho de apoyo
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.82 t.m — verificar release en el modelo o ancho de apoyo
+  [As+ regla 5.DS.03] MID_BOT_T1: 1o3/4" extendida(s) hasta cara derecha (x=5.61, aporta 2.84 cm2 de 0.84 req)
+  [As+ regla 5.DS.03] MID_BOT_T2: 1o5/8" extendida(s) hasta cara izquierda (x=5.86, aporta 2.00 cm2 de 0.84 req)
+
+Rank 2: W=235.48kg, feasible=True, D/C max=0.771 (x=9.08)
+  Corrido TOP: 3o3/4"  BOT: 3o3/4"
+  [ADVERTENCIA anclaje] extremo derecho TOP: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.07 t.m — verificar release en el modelo o ancho de apoyo
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.82 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 3: W=385.71kg, feasible=True, D/C max=0.881 (x=9.68)
+  Corrido TOP: 1o1"+1o3/4"  BOT: 1o1"+1o3/4"
+  [ADVERTENCIA anclaje] extremo derecho TOP: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.07 t.m — verificar release en el modelo o ancho de apoyo
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.82 t.m — verificar release en el modelo o ancho de apoyo
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\actual_beam_viga_3_tramos_s7.json

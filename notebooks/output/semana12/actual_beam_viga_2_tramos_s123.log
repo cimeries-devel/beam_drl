@@ -1,0 +1,59 @@
+Cargado: 110+114, 2 tramos
+Joints tomados del JSON:
+  Apoyo 0 (exterior): nodo x=  0.00  caras=[-0.125, 0.125]  ancho=0.25 m
+  Apoyo 1 (interior): nodo x=  4.58  caras=[4.450, 4.700]  ancho=0.25 m
+  Apoyo 2 (exterior): nodo x= 12.10  caras=[12.100, 13.800]  ancho=1.70 m
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 4.575, 12.1]
+  T1: frame=110, L=4.575m
+  T2: frame=114, L=7.525m
+
+GA: pop=120, gen=120, chrom=252 genes, 12 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=1000009235.92 | mean=1000147979.56 | HoF=197.21kg (12/12 OK) | sin mejora= 0 | 8.5s
+  Gen   3/120 | best=1000008752.35 | mean=1000115767.75 | HoF=294.72kg (11/12 OK) | sin mejora= 0 | 19.0s
+  Gen   4/120 | best=1000004903.80 | mean=1000109534.49 | HoF=294.72kg (11/12 OK) | sin mejora= 0 | 20.4s
+  Gen   6/120 | best=1000004169.75 | mean=1000111643.33 | HoF=294.72kg (11/12 OK) | sin mejora= 0 | 23.1s
+  Gen  12/120 | best=1000004169.75 | mean=1000110329.07 | HoF=294.72kg (11/12 OK) | sin mejora= 6 | 31.4s
+  Gen  15/120 | best=1000001401.40 | mean=1000094004.18 | HoF=304.09kg (12/12 OK) | sin mejora= 0 | 36.3s
+  Gen  18/120 | best=1000001401.40 | mean=1000105575.16 | HoF=304.09kg (12/12 OK) | sin mejora= 3 | 40.3s
+  Gen  20/120 | best=497.55 | mean=991767721.03 | HoF=304.09kg (12/12 OK) | sin mejora= 0 | 43.1s
+  Gen  24/120 | best=497.55 | mean=991773144.37 | HoF=304.09kg (12/12 OK) | sin mejora= 4 | 48.6s
+  Gen  30/120 | best=497.55 | mean=991769502.10 | HoF=304.09kg (12/12 OK) | sin mejora=10 | 56.7s
+  Gen  36/120 | best=497.55 | mean=991766942.05 | HoF=304.09kg (12/12 OK) | sin mejora=16 | 67.6s
+  Gen  42/120 | best=497.55 | mean=991771918.55 | HoF=304.09kg (12/12 OK) | sin mejora=22 | 75.8s
+  [Reinicio #1] Gen 45 -- reemplazados 60 (80.1s)
+  Gen  48/120 | best=497.55 | mean=991768237.28 | HoF=304.09kg (12/12 OK) | sin mejora=28 | 84.5s
+  Gen  54/120 | best=463.14 | mean=983439233.45 | HoF=304.09kg (12/12 OK) | sin mejora= 0 | 92.6s
+  Gen  60/120 | best=463.14 | mean=966770989.72 | HoF=304.09kg (12/12 OK) | sin mejora= 6 | 100.6s
+  Gen  66/120 | best=463.14 | mean=958429457.81 | HoF=304.09kg (12/12 OK) | sin mejora=12 | 108.8s
+  Gen  72/120 | best=463.14 | mean=958444226.17 | HoF=304.09kg (12/12 OK) | sin mejora=18 | 116.8s
+  Gen  78/120 | best=463.14 | mean=958439111.21 | HoF=304.09kg (12/12 OK) | sin mejora=24 | 125.1s
+  [Reinicio #2] Gen 79 -- reemplazados 60 (126.3s)
+  Gen  84/120 | best=463.14 | mean=958447698.39 | HoF=304.09kg (12/12 OK) | sin mejora=30 | 133.0s
+  Gen  90/120 | best=463.14 | mean=941770922.89 | HoF=304.09kg (12/12 OK) | sin mejora=36 | 141.2s
+  Gen  96/120 | best=463.14 | mean=941775937.37 | HoF=304.09kg (12/12 OK) | sin mejora=42 | 149.2s
+  Gen 102/120 | best=463.14 | mean=958435212.91 | HoF=304.09kg (12/12 OK) | sin mejora=48 | 158.0s
+  [Reinicio #3] Gen 104 -- reemplazados 60 (160.8s)
+  Gen 108/120 | best=463.14 | mean=958441165.76 | HoF=304.09kg (12/12 OK) | sin mejora=54 | 166.3s
+  Gen 114/120 | best=463.14 | mean=958444631.72 | HoF=304.09kg (12/12 OK) | sin mejora=60 | 174.4s
+  Gen 120/120 | best=463.14 | mean=958440944.25 | HoF=304.09kg (12/12 OK) | sin mejora=66 | 182.7s
+
+============================================================
+Generaciones: 120, tiempo: 182.7s
+
+Rank 1: W=304.09kg, feasible=True, D/C max=0.958 (x=12.10)
+  Corrido TOP: 3o3/4"  BOT: 3o3/4"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 2: W=355.21kg, feasible=False, D/C max=0.983 (x=7.87)
+  Corrido TOP: 1o1"+2o5/8"  BOT: 1o1"+2o5/8"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 3: W=197.21kg, feasible=False, D/C max=0.966 (x=12.10)
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+  [ADVERTENCIA anclaje] extremo izquierdo BOT: anclaje no desarrolla fy (apoyo 0.25 m); demanda en cara 0.64 t.m — verificar release en el modelo o ancho de apoyo
+  [As+ regla 5.DS.03] MID_BOT_T2: 1o1" extendida(s) hasta cara derecha (x=12.10, aporta 5.10 cm2 de 1.74 req)
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\actual_beam_viga_2_tramos_s123.json

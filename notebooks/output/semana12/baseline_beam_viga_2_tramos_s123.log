@@ -1,0 +1,45 @@
+Cargado: 110+114, 2 tramos
+h_col_default activo -> 0.30 m en todos los apoyos
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 4.575, 12.1]
+  T1: frame=110, L=4.575m
+  T2: frame=114, L=7.525m
+
+GA: pop=120, gen=120, chrom=252 genes, 12 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=436.37 | mean=74185.78 | HoF=167.22kg (12/12 OK) | sin mejora= 0 | 0.7s
+  Gen   2/120 | best=384.61 | mean=62205.65 | HoF=231.78kg (12/12 OK) | sin mejora= 0 | 1.7s
+  Gen   3/120 | best=327.60 | mean=65953.78 | HoF=234.87kg (12/12 OK) | sin mejora= 0 | 2.8s
+  Gen   6/120 | best=327.60 | mean=62413.40 | HoF=234.87kg (12/12 OK) | sin mejora= 3 | 6.3s
+  Gen   9/120 | best=299.13 | mean=57251.11 | HoF=232.85kg (12/12 OK) | sin mejora= 0 | 9.7s
+  Gen  12/120 | best=299.13 | mean=53345.33 | HoF=232.85kg (12/12 OK) | sin mejora= 3 | 12.9s
+  Gen  18/120 | best=299.13 | mean=59043.13 | HoF=232.85kg (12/12 OK) | sin mejora= 9 | 19.8s
+  Gen  19/120 | best=287.89 | mean=57947.89 | HoF=232.06kg (12/12 OK) | sin mejora= 0 | 20.9s
+  Gen  24/120 | best=287.89 | mean=63411.85 | HoF=232.06kg (12/12 OK) | sin mejora= 5 | 26.7s
+  Gen  30/120 | best=287.89 | mean=58150.39 | HoF=232.06kg (12/12 OK) | sin mejora=11 | 33.7s
+  Gen  36/120 | best=287.89 | mean=63137.84 | HoF=232.06kg (12/12 OK) | sin mejora=17 | 40.9s
+  Gen  42/120 | best=287.89 | mean=51634.94 | HoF=232.06kg (12/12 OK) | sin mejora=23 | 47.8s
+  [Reinicio #1] Gen 44 -- reemplazados 60 (49.9s)
+  Gen  48/120 | best=287.89 | mean=60268.87 | HoF=232.06kg (12/12 OK) | sin mejora=29 | 54.5s
+  Gen  54/120 | best=287.89 | mean=55874.46 | HoF=232.06kg (12/12 OK) | sin mejora=35 | 61.2s
+  Gen  60/120 | best=287.89 | mean=52876.83 | HoF=232.06kg (12/12 OK) | sin mejora=41 | 67.5s
+  Gen  66/120 | best=287.89 | mean=53952.06 | HoF=232.06kg (12/12 OK) | sin mejora=47 | 73.9s
+  [Reinicio #2] Gen 69 -- reemplazados 60 (77.0s)
+  Gen  72/120 | best=287.89 | mean=49983.50 | HoF=232.06kg (12/12 OK) | sin mejora=53 | 80.3s
+  Gen  78/120 | best=287.89 | mean=58959.31 | HoF=232.06kg (12/12 OK) | sin mejora=59 | 87.0s
+  [Early stop] Gen 79 -- sin mejora por 60 gens (88.0s)
+
+============================================================
+Generaciones: 79, tiempo: 88.0s
+
+Rank 1: W=232.06kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o1"  BOT: 2o1"
+
+Rank 2: W=240.94kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 1o1"+2o3/4"  BOT: 1o1"+2o3/4"
+
+Rank 3: W=167.22kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\baseline_beam_viga_2_tramos_s123.json

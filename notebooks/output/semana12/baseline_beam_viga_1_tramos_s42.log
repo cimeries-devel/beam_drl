@@ -1,0 +1,37 @@
+Cargado: 28, 1 tramos
+h_col_default activo -> 0.30 m en todos los apoyos
+Seccion: b=0.15m x h=0.45m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 3.74]
+  T1: frame=28, L=3.740m
+
+GA: pop=120, gen=120, chrom=96 genes, 6 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=37.43 | mean=22529.95 | HoF=37.43kg (6/6 OK) | sin mejora= 0 | 0.4s
+  Gen   6/120 | best=37.43 | mean=35594.95 | HoF=37.43kg (6/6 OK) | sin mejora= 5 | 2.6s
+  Gen  12/120 | best=37.43 | mean=41745.56 | HoF=37.43kg (6/6 OK) | sin mejora=11 | 5.5s
+  Gen  18/120 | best=37.43 | mean=32306.95 | HoF=37.43kg (6/6 OK) | sin mejora=17 | 8.2s
+  Gen  24/120 | best=37.43 | mean=37829.14 | HoF=37.43kg (6/6 OK) | sin mejora=23 | 11.0s
+  [Reinicio #1] Gen 26 -- reemplazados 60 (11.9s)
+  Gen  30/120 | best=37.43 | mean=33074.96 | HoF=37.43kg (6/6 OK) | sin mejora=29 | 13.7s
+  Gen  36/120 | best=37.43 | mean=37783.26 | HoF=37.43kg (6/6 OK) | sin mejora=35 | 16.5s
+  Gen  42/120 | best=37.43 | mean=34581.46 | HoF=37.43kg (6/6 OK) | sin mejora=41 | 19.3s
+  Gen  48/120 | best=37.43 | mean=30593.92 | HoF=37.43kg (6/6 OK) | sin mejora=47 | 21.9s
+  [Reinicio #2] Gen 51 -- reemplazados 60 (23.2s)
+  Gen  54/120 | best=37.43 | mean=31202.13 | HoF=37.43kg (6/6 OK) | sin mejora=53 | 24.6s
+  Gen  60/120 | best=37.43 | mean=36986.43 | HoF=37.43kg (6/6 OK) | sin mejora=59 | 27.3s
+  [Early stop] Gen 61 -- sin mejora por 60 gens (27.8s)
+
+============================================================
+Generaciones: 61, tiempo: 27.8s
+
+Rank 1: W=37.43kg, feasible=True, 6/6 zonas OK
+  Corrido TOP: 1o3/4"+1o5/8"  BOT: 1o3/4"+1o5/8"
+
+Rank 2: W=44.84kg, feasible=True, 6/6 zonas OK
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+
+Rank 3: W=89.40kg, feasible=True, 6/6 zonas OK
+  Corrido TOP: 2o1"  BOT: 2o1"
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\baseline_beam_viga_1_tramos_s42.json

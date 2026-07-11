@@ -1,0 +1,39 @@
+Cargado: 110+114, 2 tramos
+h_col_default activo -> 0.30 m en todos los apoyos
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 4.575, 12.1]
+  T1: frame=110, L=4.575m
+  T2: frame=114, L=7.525m
+
+GA: pop=120, gen=120, chrom=252 genes, 12 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=436.37 | mean=78337.02 | HoF=167.22kg (12/12 OK) | sin mejora= 0 | 0.8s
+  Gen   4/120 | best=294.29 | mean=58070.04 | HoF=232.85kg (12/12 OK) | sin mejora= 0 | 3.8s
+  Gen   6/120 | best=294.29 | mean=61780.36 | HoF=232.85kg (12/12 OK) | sin mejora= 2 | 5.9s
+  Gen  12/120 | best=294.29 | mean=55580.43 | HoF=232.85kg (12/12 OK) | sin mejora= 8 | 12.3s
+  Gen  18/120 | best=294.29 | mean=54930.57 | HoF=232.85kg (12/12 OK) | sin mejora=14 | 18.6s
+  Gen  24/120 | best=294.29 | mean=49875.18 | HoF=232.85kg (12/12 OK) | sin mejora=20 | 25.1s
+  [Reinicio #1] Gen 29 -- reemplazados 60 (30.4s)
+  Gen  30/120 | best=294.29 | mean=58528.99 | HoF=232.85kg (12/12 OK) | sin mejora=26 | 31.5s
+  Gen  36/120 | best=294.29 | mean=52174.28 | HoF=232.85kg (12/12 OK) | sin mejora=32 | 38.1s
+  Gen  42/120 | best=294.29 | mean=54538.25 | HoF=232.85kg (12/12 OK) | sin mejora=38 | 44.7s
+  Gen  48/120 | best=294.29 | mean=47842.22 | HoF=232.85kg (12/12 OK) | sin mejora=44 | 51.0s
+  Gen  54/120 | best=294.29 | mean=51914.03 | HoF=232.85kg (12/12 OK) | sin mejora=50 | 57.5s
+  [Reinicio #2] Gen 54 -- reemplazados 60 (57.5s)
+  Gen  60/120 | best=294.29 | mean=52034.70 | HoF=232.85kg (12/12 OK) | sin mejora=56 | 64.1s
+  [Early stop] Gen 64 -- sin mejora por 60 gens (68.7s)
+
+============================================================
+Generaciones: 64, tiempo: 68.7s
+
+Rank 1: W=232.85kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o1"  BOT: 2o1"
+
+Rank 2: W=288.81kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o1"+1o3/4"  BOT: 2o1"+1o3/4"
+
+Rank 3: W=167.22kg, feasible=True, 12/12 zonas OK
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\baseline_beam_viga_2_tramos_s7.json

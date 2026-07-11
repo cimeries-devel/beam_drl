@@ -1,0 +1,44 @@
+Cargado: 18+17+16, 3 tramos
+h_col_default activo -> 0.30 m en todos los apoyos
+Seccion: b=0.25m x h=0.55m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 5.73, 11.18, 13.93]
+  T1: frame=18, L=5.730m
+  T2: frame=17, L=5.450m
+  T3: frame=16, L=2.750m
+
+GA: pop=120, gen=120, chrom=360 genes, 18 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=1069.75 | mean=81963.54 | HoF=269.75kg (18/18 OK) | sin mejora= 0 | 1.0s
+  Gen   2/120 | best=378.69 | mean=46756.82 | HoF=245.44kg (18/18 OK) | sin mejora= 0 | 2.5s
+  Gen   6/120 | best=378.69 | mean=46371.43 | HoF=245.44kg (18/18 OK) | sin mejora= 4 | 9.3s
+  Gen   8/120 | best=271.68 | mean=58960.58 | HoF=241.51kg (18/18 OK) | sin mejora= 0 | 12.6s
+  Gen  12/120 | best=271.68 | mean=49222.83 | HoF=241.51kg (18/18 OK) | sin mejora= 4 | 19.0s
+  Gen  13/120 | best=253.71 | mean=48433.38 | HoF=253.71kg (18/18 OK) | sin mejora= 0 | 20.6s
+  Gen  18/120 | best=253.71 | mean=49963.78 | HoF=253.71kg (18/18 OK) | sin mejora= 5 | 28.5s
+  Gen  24/120 | best=253.71 | mean=50788.45 | HoF=253.71kg (18/18 OK) | sin mejora=11 | 38.0s
+  Gen  30/120 | best=253.71 | mean=46823.72 | HoF=253.71kg (18/18 OK) | sin mejora=17 | 47.4s
+  Gen  36/120 | best=253.71 | mean=55061.43 | HoF=253.71kg (18/18 OK) | sin mejora=23 | 56.9s
+  [Reinicio #1] Gen 38 -- reemplazados 60 (60.0s)
+  Gen  42/120 | best=253.71 | mean=51761.29 | HoF=253.71kg (18/18 OK) | sin mejora=29 | 66.2s
+  Gen  48/120 | best=253.71 | mean=55573.16 | HoF=253.71kg (18/18 OK) | sin mejora=35 | 75.6s
+  Gen  54/120 | best=253.71 | mean=47232.73 | HoF=253.71kg (18/18 OK) | sin mejora=41 | 84.8s
+  Gen  60/120 | best=253.71 | mean=55432.35 | HoF=253.71kg (18/18 OK) | sin mejora=47 | 94.1s
+  [Reinicio #2] Gen 63 -- reemplazados 60 (98.9s)
+  Gen  66/120 | best=253.71 | mean=41585.36 | HoF=253.71kg (18/18 OK) | sin mejora=53 | 103.5s
+  Gen  72/120 | best=253.71 | mean=51572.05 | HoF=253.71kg (18/18 OK) | sin mejora=59 | 112.9s
+  [Early stop] Gen 73 -- sin mejora por 60 gens (114.5s)
+
+============================================================
+Generaciones: 73, tiempo: 114.5s
+
+Rank 1: W=253.71kg, feasible=True, 18/18 zonas OK
+  Corrido TOP: 1o1"+2o3/4"  BOT: 1o1"+2o3/4"
+
+Rank 2: W=241.51kg, feasible=True, 18/18 zonas OK
+  Corrido TOP: 2o1"  BOT: 2o1"
+
+Rank 3: W=307.20kg, feasible=True, 18/18 zonas OK
+  Corrido TOP: 2o1"+1o3/4"  BOT: 2o1"+1o3/4"
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\baseline_beam_viga_3_tramos_s7.json

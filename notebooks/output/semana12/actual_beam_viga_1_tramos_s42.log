@@ -1,0 +1,46 @@
+Cargado: 28, 1 tramos
+Joints tomados del JSON:
+  Apoyo 0 (exterior): nodo x=  0.00  caras=[-0.750, 0.750]  ancho=1.50 m
+  Apoyo 1 (exterior): nodo x=  3.74  caras=[3.640, 3.840]  ancho=0.20 m
+Seccion: b=0.15m x h=0.45m
+fc: 210.0 kg/cm2
+Apoyos: [0.0, 3.74]
+  T1: frame=28, L=3.740m
+
+GA: pop=120, gen=120, chrom=96 genes, 6 zonas
+Corrido simetrico: True
+
+  Gen   1/120 | best=15.13 | mean=250034993.65 | HoF=15.13kg (6/6 OK) | sin mejora= 0 | 0.4s
+  Gen   6/120 | best=15.13 | mean=750060444.83 | HoF=15.13kg (6/6 OK) | sin mejora= 5 | 2.7s
+  Gen  12/120 | best=15.13 | mean=683385594.07 | HoF=15.13kg (6/6 OK) | sin mejora=11 | 5.7s
+  Gen  18/120 | best=15.13 | mean=641714896.28 | HoF=15.13kg (6/6 OK) | sin mejora=17 | 8.7s
+  Gen  24/120 | best=15.13 | mean=725059481.34 | HoF=15.13kg (6/6 OK) | sin mejora=23 | 11.7s
+  [Reinicio #1] Gen 26 -- reemplazados 60 (12.7s)
+  Gen  30/120 | best=15.13 | mean=641720679.33 | HoF=15.13kg (6/6 OK) | sin mejora=29 | 14.6s
+  Gen  36/120 | best=15.13 | mean=733394604.39 | HoF=15.13kg (6/6 OK) | sin mejora=35 | 17.7s
+  Gen  42/120 | best=15.13 | mean=675055427.53 | HoF=15.13kg (6/6 OK) | sin mejora=41 | 20.6s
+  Gen  48/120 | best=15.13 | mean=608382464.62 | HoF=15.13kg (6/6 OK) | sin mejora=47 | 23.7s
+  [Reinicio #2] Gen 51 -- reemplazados 60 (25.2s)
+  Gen  54/120 | best=15.13 | mean=633383197.11 | HoF=15.13kg (6/6 OK) | sin mejora=53 | 26.7s
+  Gen  60/120 | best=15.13 | mean=641722983.66 | HoF=15.13kg (6/6 OK) | sin mejora=59 | 29.7s
+  Gen  66/120 | best=15.13 | mean=658385848.35 | HoF=15.13kg (6/6 OK) | sin mejora=65 | 32.6s
+  Gen  72/120 | best=15.13 | mean=700062073.48 | HoF=15.13kg (6/6 OK) | sin mejora=71 | 35.7s
+  [Reinicio #3] Gen 76 -- reemplazados 60 (37.7s)
+  Gen  78/120 | best=15.13 | mean=691721946.37 | HoF=15.13kg (6/6 OK) | sin mejora=77 | 38.7s
+  [Early stop] Gen 81 -- sin mejora por 80 gens (40.2s)
+
+============================================================
+Generaciones: 81, tiempo: 40.2s
+
+Rank 1: W=15.13kg, feasible=True, D/C max=0.954 (x=2.34)
+  Corrido TOP: 2o1/2"  BOT: 2o1/2"
+  [ADVERTENCIA anclaje] extremo derecho BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.40 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 2: W=24.74kg, feasible=True, D/C max=0.639 (x=2.34)
+  Corrido TOP: 2o5/8"  BOT: 2o5/8"
+  [ADVERTENCIA anclaje] extremo derecho BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.40 t.m — verificar release en el modelo o ancho de apoyo
+
+Rank 3: W=37.24kg, feasible=True, D/C max=0.463 (x=2.34)
+  Corrido TOP: 2o3/4"  BOT: 2o3/4"
+  [ADVERTENCIA anclaje] extremo derecho BOT: anclaje no desarrolla fy (apoyo 0.20 m); demanda en cara 0.40 t.m — verificar release en el modelo o ancho de apoyo
+JSON exportado: C:\Users\EFRAIN\Documents\UNIVERSIDAD\UNI\TESIS\repositorio_tesis II\beam_drl\notebooks\output\semana12\actual_beam_viga_1_tramos_s42.json
